@@ -1,4 +1,4 @@
-package mvp.shared;
+package mvpApp.shared;
 
 public class Person{
     private String firstName;

@@ -1,14 +1,14 @@
-package mvp.client;
+package mvpApp.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
-import mvp.shared.Person;
+import mvpApp.shared.Person;
 
 /**
  * Created by dmitry on 10.01.15.
  */
-public class MVPApp implements EntryPoint{
+public class MvpApp implements EntryPoint{
 
     @Override
     public void onModuleLoad() {
