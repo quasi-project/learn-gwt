@@ -3,6 +3,10 @@ package mvpApp.client;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
+import mvpApp.client.presenter.PersonPresenter;
+import mvpApp.client.presenter.PersonPresenter.Display;
+import mvpApp.client.presenter.Presenter;
+import mvpApp.client.view.PersonView;
 import mvpApp.shared.Person;
 
 /**
@@ -13,7 +17,8 @@ public class MvpApp implements EntryPoint{
     @Override
     public void onModuleLoad() {
         Person me = new Person("Dmitry", "Davydov");
-        Label label = new Label(me.toString());
-        RootPanel.get().add(label);
+        Display view = new PersonView();
+        Presenter presenter = new PersonPresenter(me, view);
+        presenter.go(RootPanel.get());
     }
 }
